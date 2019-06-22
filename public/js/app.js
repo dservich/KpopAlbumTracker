@@ -1809,6 +1809,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -30117,7 +30118,13 @@ var render = function() {
     _c(
       "p",
       [
-        _c("router-link", { attrs: { to: { name: "home" } } }, [_vm._v("Home")])
+        _c("router-link", { attrs: { to: { name: "home" } } }, [
+          _vm._v("Home")
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "/admin/comeback/create" } }, [
+          _vm._v("New Comeback")
+        ])
       ],
       1
     ),

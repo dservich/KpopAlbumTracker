@@ -4,6 +4,7 @@
 
         <p>
             <router-link :to="{ name: 'home' }">Home</router-link>
+            <a href="/admin/comeback/create">New Comeback</a>
         </p>
 
         <div class="container">

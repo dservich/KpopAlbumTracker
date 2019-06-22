@@ -17,7 +17,7 @@ class CreateComebacksTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('artist_id');
             $table->string('type')->nullable();
-            $table->boolean('is_debut');
+            $table->boolean('is_debut')->default(false);
             $table->dateTime('announcement_date');
             $table->dateTime('release_date');
             $table->timestamps();

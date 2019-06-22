@@ -24,7 +24,7 @@ class ComebackController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.comeback.create');
     }
 
     /**
@@ -35,7 +35,15 @@ class ComebackController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $comeback = Comeback::create([
+            'artist_id' => $request->artist,
+            'type' => $request->type,
+            'is_debut' => $request->debut ?? false,
+            'announcement_date' => $request->input('announcement-date'),
+            'release_date' => $request->input('release-date'),
+        ]);
+
+        dd($comeback);
     }
 
     /**
