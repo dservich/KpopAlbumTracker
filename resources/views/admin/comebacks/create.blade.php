@@ -2,7 +2,7 @@
 
 @section('content')
 <h1>Create a New Comeback</h1>
-{!! Form::open(['route' => 'admin.comeback.store']) !!}
+{!! Form::open(['route' => 'admin.comebacks.store']) !!}
 	<div class="w-full my-6">
 		{!! Form::label('artist', 'Artist/Group', []) !!}
 		{!! Form::select('artist', \App\Artist::pluck('name', 'id'), null, ['placeholder' => 'Select Artist...']) !!}

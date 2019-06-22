@@ -24,7 +24,7 @@ class ComebackController extends Controller
      */
     public function create()
     {
-        return view('admin.comeback.create');
+        return view('admin.comebacks.create');
     }
 
     /**
