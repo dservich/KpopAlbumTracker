@@ -15,6 +15,7 @@ Auth::routes();
 
 Route::prefix('admin')->as('admin.')->group(function(){
 	Route::prefix('comebacks')->as('comebacks.')->group(function(){
+		Route::get('', 'ComebackController@index')->name('index');
 		Route::get('create', 'ComebackController@create')->name('create');
 		Route::post('store', 'ComebackController@store')->name('store');
 	});

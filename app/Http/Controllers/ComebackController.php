@@ -14,7 +14,7 @@ class ComebackController extends Controller
      */
     public function index()
     {
-        //
+        dd(Comeback::all());
     }
 
     /**
