@@ -1,28 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Create a New Comeback</h1>
-{!! Form::open(['route' => 'admin.artists.store']) !!}
+<h1>Add a New Artist</h1>
+{!! Form::open(['route' => 'admin.artists.store', 'files' => true]) !!}
 	<div class="w-full my-6">
-		{!! Form::label('artist', 'Artist/Group', []) !!}
-		{!! Form::select('artist', \App\Artist::pluck('name', 'id'), null, ['placeholder' => 'Select Artist...']) !!}
+		{!! Form::label('name', 'Artist/Group Name', []) !!}
+		{!! Form::text('name') !!}
 	</div>
 	<div class="w-full my-6">
-		{!! Form::label('type', 'Type of Comeback', []) !!}
-		{!! Form::text('type') !!}
+		{!! Form::label('type', 'Artist Type', []) !!}
+		{!! Form::select('type', ['Soloist', 'Group'], null, ['placeholder' => 'Please select a type...']) !!}
 	</div>
 	<div class="w-full my-6">
-		{!! Form::label('debut', 'Debut', []) !!}
-		{!! Form::checkbox('debut', '', false, []) !!}
+		{!! Form::label('profile_image', 'Profile Image', []) !!}
+		{!! Form::file('profile_image') !!}
 	</div>
 	<div class="w-full my-6">
-		{!! Form::label('announcement-date', 'Announcement date', []) !!}
-		{!! Form::date('announcement-date', \Illuminate\Support\Carbon::now(), []) !!}
+		{!! Form::label('record_label', 'Record label', []) !!}
+		{!! Form::select('record_label', \App\RecordLabel::orderBy('name')->pluck('name', 'id'), null, ['placeholder' => 'Select a label...']) !!}
 	</div>
-	<div class="w-full my-6">
-		{!! Form::label('release-date', 'Release date', []) !!}
-		{!! Form::date('release-date', '', []) !!}
-	</div>
-	{!! Form::submit('Create Comeback', []) !!}
+	
+	{!! Form::submit('Add Artist', []) !!}
 {!! Form::close() !!}
 @endsection

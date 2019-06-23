@@ -35,7 +35,14 @@ class ArtistController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $artist = Artist::create([
+            'name' => $request->name,
+            'type' => $request->type,
+            'image' => 'sample-image',
+            'record_label_id' => $request->record_label ?? 1,
+        ]);
+
+        return back();
     }
 
     /**

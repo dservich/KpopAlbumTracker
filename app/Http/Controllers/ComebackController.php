@@ -43,7 +43,7 @@ class ComebackController extends Controller
             'release_date' => $request->input('release-date'),
         ]);
 
-        dd($comeback);
+        return back();
     }
 
     /**

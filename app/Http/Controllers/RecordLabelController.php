@@ -24,7 +24,7 @@ class RecordLabelController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.recordlabels.create');
     }
 
     /**
@@ -35,7 +35,12 @@ class RecordLabelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $label = RecordLabel::create([
+            'name' => $request->name,
+            'color' => $request->color,
+        ]);
+
+        return back();
     }
 
     /**

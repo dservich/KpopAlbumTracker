@@ -5,7 +5,7 @@
 {!! Form::open(['route' => 'admin.comebacks.store']) !!}
 	<div class="w-full my-6">
 		{!! Form::label('artist', 'Artist/Group', []) !!}
-		{!! Form::select('artist', \App\Artist::pluck('name', 'id'), null, ['placeholder' => 'Select Artist...']) !!}
+		{!! Form::select('artist', \App\Artist::orderBy('name')->pluck('name', 'id'), null, ['placeholder' => 'Select Artist...']) !!}
 	</div>
 	<div class="w-full my-6">
 		{!! Form::label('type', 'Type of Comeback', []) !!}

@@ -18,6 +18,16 @@ Route::prefix('admin')->as('admin.')->group(function(){
 		Route::get('create', 'ComebackController@create')->name('create');
 		Route::post('store', 'ComebackController@store')->name('store');
 	});
+
+	Route::prefix('artists')->as('artists.')->group(function(){
+		Route::get('create', 'ArtistController@create')->name('create');
+		Route::post('store', 'ArtistController@store')->name('store');
+	});
+
+	Route::prefix('recordlabels')->as('recordlabels.')->group(function(){
+		Route::get('create', 'RecordLabelController@create')->name('create');
+		Route::post('store', 'RecordLabelController@store')->name('store');
+	});
 });
 
 
