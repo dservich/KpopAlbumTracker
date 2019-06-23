@@ -31,5 +31,7 @@ Route::prefix('admin')->as('admin.')->group(function(){
 	});
 });
 
+Route::get('comebacks/calendar', 'ComebackController@getComebacks')->name('comebacks.calendar.getcomebacks');
+
 
 Route::get('/{any}', 'SpaController@index')->where('any', '.*')->name('spa');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comeback;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class ComebackController extends Controller
 {
@@ -89,5 +90,23 @@ class ComebackController extends Controller
     public function destroy(Comeback $comeback)
     {
         //
+    }
+
+    public function getComebacks(Request $request) {
+        logger('getting comebacks for the calendar view.');
+
+        // $response = Comeback::whereBetween('release_date', [Carbon::parse($request->start), Carbon::parse($request->end)])->get()->toArray();
+        $comebacks = Comeback::all();
+
+        $response = array();
+        /*$comebacks->each(function($comeback) use (&$response) {
+            $response[] = array(
+                'title' => $comeback->artist->name,
+                'start' => $comeback->release_date
+            );
+        });*/
+
+        logger($comebacks->toJson());
+        return response()->json($response);
     }
 }

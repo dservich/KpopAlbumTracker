@@ -8,8 +8,12 @@ class Artist extends Model
 {
     protected $guarded = [];
 
+    protected $with = [
+    	'comebacks',
+    ];
+
 
     public function comebacks() {
-    	return $this->hasMany(Comeback::class);
+    	return $this->hasMany(Comeback::class)->latest();
     }
 }
