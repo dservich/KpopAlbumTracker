@@ -10,6 +10,7 @@ class Artist extends Model
 
     protected $with = [
     	'comebacks',
+    	
     ];
 
 
