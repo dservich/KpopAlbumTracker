@@ -9,10 +9,11 @@ class Comeback extends Model
     protected $guarded = [];
 
     protected $with = [
-    	'artist',
+        'artist'
     ];
 
-    public function artist() {
+    public function artist()
+    {
     	return $this->belongsTo(Artist::class);
     }
 }

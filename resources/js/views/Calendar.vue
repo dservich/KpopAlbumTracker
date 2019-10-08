@@ -12,7 +12,7 @@
 
 	export default {
 		components: {
-			FullCalendar 
+			FullCalendar
 		},
 		data() {
 		    return {
@@ -21,7 +21,6 @@
 		    		{
 		    			url: '/comebacks/calendar',
 		    			method: 'GET',
-
 		    		}
 		    	],
 		    }
