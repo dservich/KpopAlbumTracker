@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\TeaserVideo;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class TeaserVideoController extends Controller
+class TrackController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,16 +13,6 @@ class TeaserVideoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
     {
         //
     }
@@ -41,21 +31,10 @@ class TeaserVideoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\TeaserVideo  $teaserVideo
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(TeaserVideo $teaserVideo)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\TeaserVideo  $teaserVideo
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(TeaserVideo $teaserVideo)
+    public function show($id)
     {
         //
     }
@@ -64,10 +43,10 @@ class TeaserVideoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\TeaserVideo  $teaserVideo
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TeaserVideo $teaserVideo)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +54,10 @@ class TeaserVideoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\TeaserVideo  $teaserVideo
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TeaserVideo $teaserVideo)
+    public function destroy($id)
     {
         //
     }

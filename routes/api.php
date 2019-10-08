@@ -18,6 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('comebacks/calendar', function (Request $request) {
-    return Comeback::all();
-});
+Route::get('comebacks/calendar', 'Api\CalendarController@getComebacks');

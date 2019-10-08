@@ -8,9 +8,7 @@ class Comeback extends Model
 {
     protected $guarded = [];
 
-    protected $with = [
-        'artist'
-    ];
+    protected $with = [];
 
     public function artist()
     {

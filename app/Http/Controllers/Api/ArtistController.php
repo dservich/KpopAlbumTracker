@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Album;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class AlbumController extends Controller
+class ArtistController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,16 +13,6 @@ class AlbumController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
     {
         //
     }
@@ -41,21 +31,10 @@ class AlbumController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Album  $album
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Album $album)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Album  $album
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Album $album)
+    public function show($id)
     {
         //
     }
@@ -64,10 +43,10 @@ class AlbumController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Album  $album
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Album $album)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +54,10 @@ class AlbumController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Album  $album
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Album $album)
+    public function destroy($id)
     {
         //
     }

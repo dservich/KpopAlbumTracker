@@ -92,10 +92,4 @@ class ComebackController extends Controller
         //
     }
 
-    public function getComebacks(Request $request)
-    {
-        $comebacks = Comeback::all();
-
-        return response()->json($comebacks);
-    }
 }

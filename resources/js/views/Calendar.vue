@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1 class="py-6 bg-blue-400">Comeback Calendar</h1>
+		<page-title title="Calendar"/>
 
 		<FullCalendar defaultView="dayGridMonth" :plugins="calendarPlugins" :eventSources="eventSources"/>
 	</div>
@@ -9,17 +9,19 @@
 <script>
 	import FullCalendar from '@fullcalendar/vue'
 	import dayGridPlugin from '@fullcalendar/daygrid'
+    import PageTitle from "../components/PageTitle";
 
 	export default {
 		components: {
-			FullCalendar
+			FullCalendar,
+            PageTitle
 		},
 		data() {
 		    return {
 		    	calendarPlugins: [ dayGridPlugin ],
 		    	eventSources: [
 		    		{
-		    			url: '/comebacks/calendar',
+		    			url: '/api/comebacks/calendar',
 		    			method: 'GET',
 		    		}
 		    	],
