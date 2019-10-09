@@ -1,7 +1,7 @@
 <template>
     <div>
         <header>
-            <h1>KPop Album Tracker</h1>
+            <h1 class="text-3xl text-center bg-blue-200 p-4 font-semibold">KPop Album Tracker</h1>
 
             <nav class="bg-blue-200 w-full my-2 p-2">
                 <router-link :to="{ name: 'home' }" class="underline hover:text-purple-800 px-2">Home</router-link>

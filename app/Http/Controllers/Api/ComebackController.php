@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Comeback;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -60,5 +61,10 @@ class ComebackController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getComebackFeed(Request $request)
+    {
+        return Comeback::with('artist')->latest()->get();
     }
 }
